@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="box">
+    <div class="box-heading">
+      <h1>Passagens Aéreas</h1>
+    </div>
+    <!-- <form> -->
+    <div class="box-content">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="mb-3 d-none d-sm-block">Encontre os melhores preços e boa viagem!</h2>
+          <div class="form-check form-check-inline mb-3">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineGoAndback" value="option1" [value]="" [(ngModel)]="model.goAndback">
+            <label class="form-check-label" for="inlineGoAndback">Ida e Volta</label>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="origin-date">Origem</label>
+                <input [(ngModel)]="model.origin" [ngbTypeahead]="search" [inputFormatter]="listFormatter" [resultFormatter]="listFormatter" type="text" class="form-control origin-date" id="origin-date" aria-describedby="originHelp" placeholder="São Paulo, Brasil - (SAO - Todos Aeroportos)">
+                <small *ngIf="isSearchingTerm" id="originHelp" class="form-text">Buscando...</small>
+                <small *ngIf="searchTermFailed" id="originHelp" class="form-text text-warning">Não encontrado.</small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="destiny-date">Destino</label>
+                <input [(ngModel)]="model.destiny" [ngbTypeahead]="search" [inputFormatter]="listFormatter" [resultFormatter]="listFormatter" type="text" class="form-control destiny-date" id="destiny-date" aria-describedby="destinyHelp" placeholder="Miami, Miami, Estados Unidos da América (MIA)">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-6 col-md-6">
+                  <div class="form-group">
+                    <label for="origin">Data de ida</label>
+                    <input type="text" class="form-control" id="origin" aria-describedby="originHelp" placeholder="08/06/2018">
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-group">
+                    <label for="destiny">Data de volta</label>
+                    <input type="text" class="form-control" id="destiny" aria-describedby="destinyHelp" placeholder="12/06/2018">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-4 col-md-4">
+                  <div class="form-group">
+                    <label for="person">Adultos</label>
+                    <select class="custom-select">
+                      <option selected>Dois Adultos</option>
+                      <option>1 adulto</option>
+                      <option>2 adultos</option>
+                      <option>3 adultos</option>
+                      <option>4 adultos</option>
+                      <option>5 adultos</option>
+                      <option>6 adultos</option>
+                      <option>7 adultos</option>
+                      <option>8 adultos</option>
+                      <option>9 adultos</option>
+                      <option>10 adultos</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-4 col-md-4">
+                  <div class="form-group">
+                    <label for="child">Crianças</label>
+                    <select class="custom-select">
+                      <option selected>Nenhuma</option>
+                      <option>1 criança</option>
+                      <option>2 crianças</option>
+                      <option>3 crianças</option>
+                      <option>4 crianças</option>
+                      <option>5 crianças</option>
+                      <option>6 crianças</option>
+                      <option>7 crianças</option>
+                      <option>8 crianças</option>
+                      <option>9 crianças</option>
+                    </select>
+                    <small id="childHelp" class="form-text">De 2 a 11 anos</small>
+                  </div>
+                </div>
+                <div class="col-4 col-md-4">
+                  <div class="form-group">
+                    <label for="baby">Bebês</label>
+                    <select class="custom-select">
+                      <option selected>Nenhum</option>
+                      <option>1 bebê</option>
+                      <option>2 bebês</option>
+                      <option>3 bebês</option>
+                      <option>4 bebês</option>
+                      <option>5 bebês</option>
+                      <option>6 bebês</option>
+                      <option>7 bebês</option>
+                      <option>8 bebês</option>
+                      <option>9 bebês</option>
+                    </select>
+                    <small id="babyHelp" class="form-text">0 a 23 meses</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </form> -->
+  </div>
+</div>

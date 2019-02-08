@@ -1,0 +1,42 @@
+//  Override Bootstrap forms default style
+
+.form-control {
+  border: 1px solid @curious-blue;
+  font-size: .9rem;
+
+  &::placeholder {
+    color: @dimgrey;
+  }
+  &::-moz-placeholder {
+    color: @dimgrey;
+  }
+  &:-ms-input-placeholder {
+    color: @dimgrey;
+  }
+}
+
+.origin-date, .destiny-date {
+  &::placeholder {
+    color: @celurian-blue;
+  }
+  &::-moz-placeholder {
+    color: @celurian-blue;
+  }
+  &:-ms-input-placeholder {
+    color: @celurian-blue;
+  }
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.custom-select {
+  font-size: .7rem;
+  font-weight: 700;
+  background-color: @denim-blue!important;
+  border: 1px solid darken(@denim-blue, 20);
+  color: #fff;
+  background: url('../src/assets/sort-down.png') no-repeat right .75rem center/8px 10px;
+}
